@@ -1,0 +1,114 @@
+html {
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  }
+body{
+    /* background: #ffe1bd; */
+}
+
+.style_dev_stat{
+    color:#ffffff;
+    font-weight: 700;
+    /* text-shadow: #000 1px 0 10px; */
+}
+.center-flex-column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hr{
+    width: 50px;
+    /* background: #000; */
+    border-bottom: 3px solid #000;
+}
+
+.circle{
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+/*Projects*/
+.p1{
+    background:
+        /* top, transparent red, faked with gradient */
+        linear-gradient(rgba(255, 0, 0, 0.45),
+        rgba(0, 195, 255, 0.45))
+}
+/*Overlay image*/
+.project-grid{
+    position: relative;
+    width: 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 3px;
+    transition: .5s ease;
+    background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient(rgba(189, 187, 187, 0.9),
+    rgba(0, 195, 255, 0.45))
+}
+.project-grid:hover .overlay{
+opacity: 1;
+}
+.text{
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/*------*/
+/* Medium screens */
+@media all and (min-width: 760px) {
+    .page-header{
+        margin: 10rem 0;
+
+    }
+    .name-em{
+        font-size: 5rem;
+    }
+    #navigation{
+        overflow: hidden;
+    }
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .sticky + section {
+      padding-top: 60px;
+    }
+    .overlay-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+    .section-title,.contact-title{
+        padding: 5rem
+    }
+    section {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      /* margin-top: 30rem; */
+        height: 100vh;
+        overflow: hidden;
+        /* z-index: 999; */
+
+
+    }
+  }
